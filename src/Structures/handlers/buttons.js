@@ -24,9 +24,7 @@ module.exports = async (client, pG, Ascii) => {
     }
 
     if (button.permission) {
-      if (Perms.includes(button.permission)) {
-        button.defaultPermission = false
-      } else {
+      if (!Perms.includes(button.permission)) {
         return Table.addRow(button.name, '🔶 FAILED', 'Invalid Permissions')
       }
     }
