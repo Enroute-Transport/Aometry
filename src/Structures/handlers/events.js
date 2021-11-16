@@ -3,6 +3,7 @@ const { Constants } = require('discord.js')
 
 module.exports = async (client, pG, Ascii) => {
   const Table = new Ascii('Events Loaded');
+  Table.setHeader('Name', 'Status')
   const Events = Object.values(Constants.Events)
 
   (await pG(`${process.cwd()}/events/*/*.js`)).map(async (file) => {

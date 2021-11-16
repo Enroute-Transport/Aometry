@@ -8,6 +8,7 @@ const { Client } = require('discord.js')
 
 module.exports = async (client, pG, Ascii) => {
   const Table = new Ascii('Button Loaded')
+  Table.setHeading('Command', 'Status')
 
   const buttonsArray = [];
 
